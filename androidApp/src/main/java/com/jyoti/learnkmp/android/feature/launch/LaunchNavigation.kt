@@ -6,6 +6,6 @@ import androidx.navigation.compose.composable
 const val launchRoute = "Launch_route"
 fun NavGraphBuilder.launchScreen(onLaunchClick: (launchId: String) -> Unit){
     composable(route = launchRoute){
-        LaunchRoute(onLaunchClick)
+        LaunchRoute(onLaunchClick = onLaunchClick)
     }
 }

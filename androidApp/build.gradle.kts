@@ -1,6 +1,7 @@
 plugins {
     id("com.android.application")
     kotlin("android")
+    id("com.google.devtools.ksp")
 }
 
 android {
@@ -17,7 +18,7 @@ android {
         compose = true
     }
     composeOptions {
-        kotlinCompilerExtensionVersion = "1.4.7"
+        kotlinCompilerExtensionVersion = "1.5.2"
     }
     packaging {
         resources {
@@ -36,6 +37,14 @@ android {
     kotlinOptions {
         jvmTarget = "1.8"
     }
+    applicationVariants.all {
+        val variantName = name
+        sourceSets {
+            getByName("main") {
+                java.srcDir(File("build/generated/ksp/$variantName/kotlin"))
+            }
+        }
+    }
 }
 
 dependencies {
@@ -49,5 +58,13 @@ dependencies {
     implementation("androidx.navigation:navigation-compose:2.6.0")
     implementation("androidx.compose.material3:material3:1.1.0-beta02")
     implementation("io.coil-kt:coil-compose:2.2.2")
+
+    with(Deps.Koin) {
+        implementation(core)
+        implementation(android)
+        implementation(annotations)
+        implementation(compose)
+        ksp(kspCompiler)
+    }
 
 }

@@ -2,13 +2,13 @@ package com.jyoti.learnkmp.domain
 
 import com.jyoti.learnkmp.data.model.RocketLaunch
 import com.jyoti.learnkmp.date.daysUntilNewYear
-import com.jyoti.learnkmp.network.httpClient
 import com.jyoti.learnkmp.util.Platform
 import com.jyoti.learnkmp.util.getPlatform
+import io.ktor.client.HttpClient
 import io.ktor.client.call.body
 import io.ktor.client.request.get
 
-class Greeting() {
+class Greeting(private val httpClient: HttpClient) {
     private val platform: Platform = getPlatform()
     @Throws(Exception::class)
     suspend fun greet(): String {

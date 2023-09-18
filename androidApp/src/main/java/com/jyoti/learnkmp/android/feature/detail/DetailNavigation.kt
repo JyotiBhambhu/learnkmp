@@ -23,6 +23,6 @@ fun NavGraphBuilder.detailScreen() {
             defaultValue = ""
         })
     ) {
-        DetailRoute(it.arguments?.getString(idArg) ?: "")
+        DetailRoute(id = it.arguments?.getString(idArg) ?: "")
     }
 }

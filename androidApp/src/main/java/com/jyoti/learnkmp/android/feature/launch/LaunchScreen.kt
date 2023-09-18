@@ -7,29 +7,19 @@ import androidx.compose.foundation.lazy.items
 import androidx.compose.material.Text
 import androidx.compose.material3.ListItem
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.LaunchedEffect
+import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
-import androidx.compose.runtime.mutableStateOf
-import androidx.compose.runtime.remember
-import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import coil.compose.AsyncImage
 import com.jyoti.learnkmp.data.model.RocketLaunch
-import com.jyoti.learnkmp.domain.RocketLaunchesUseCase
+import org.koin.androidx.compose.koinViewModel
 
 @Composable
-fun LaunchRoute(onLaunchClick: (launchId: String) -> Unit) {
-    var rocketLaunches: List<RocketLaunch> by remember { mutableStateOf(emptyList()) }
-    LaunchedEffect(key1 = Unit, block = {
-        rocketLaunches = try {
-            RocketLaunchesUseCase().invoke()
-        } catch (e: Exception) {
-            listOf()
-        }
-    })
+fun LaunchRoute(viewModel: LaunchViewModel = koinViewModel(), onLaunchClick: (launchId: String) -> Unit) {
+    val state by viewModel.screenState.collectAsState()
     LazyColumn {
-        items(rocketLaunches) {
+        items(state) {
             LaunchItem(it, onClick = onLaunchClick)
         }
     }
