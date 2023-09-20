@@ -8,13 +8,14 @@
 
 import SwiftUI
 import shared
+import data
 import SDWebImageSwiftUI
 
 struct LaunchCard: View {
     
-    let launchItem: RocketLaunch
+    let launchItem: DataRocketLaunch
     
-    init(launchItem: RocketLaunch) {
+    init(launchItem: DataRocketLaunch) {
         self.launchItem = launchItem
     }
     

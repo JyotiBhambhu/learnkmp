@@ -23,3 +23,5 @@ dependencyResolutionManagement {
 rootProject.name = "LearnKMP"
 include(":androidApp")
 include(":shared")
+include(":data")
+include(":XCFrameData")

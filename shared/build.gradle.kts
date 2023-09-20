@@ -3,7 +3,6 @@ plugins {
     kotlin("plugin.serialization")
     id("com.android.library")
     id("com.google.devtools.ksp")
-//    id("kotlinx-serialization")
 }
 
 @OptIn(org.jetbrains.kotlin.gradle.ExperimentalKotlinGradlePluginApi::class)
@@ -34,6 +33,7 @@ kotlin {
             kotlin.srcDir("build/generated/ksp/metadata/commonMain/kotlin")
             dependencies {
                 //put your multiplatform dependencies here
+                implementation(project(":data"))
                 implementation("org.jetbrains.kotlinx:kotlinx-datetime:0.4.0")
                 implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.7.3")
                 implementation("io.ktor:ktor-client-core:$ktorVersion")

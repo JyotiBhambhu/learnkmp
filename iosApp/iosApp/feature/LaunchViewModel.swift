@@ -8,9 +8,10 @@
 
 import Foundation
 import shared
+import data
 
 class LaunchViewModel: ObservableObject{
-    @Published var state: [RocketLaunch]?
+    @Published var state: [DataRocketLaunch]?
     @Published var error: String?
     
     init() {

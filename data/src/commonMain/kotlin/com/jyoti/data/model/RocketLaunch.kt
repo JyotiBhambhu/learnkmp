@@ -1,4 +1,4 @@
-package com.jyoti.learnkmp.data.model
+package com.jyoti.data.model
 
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable

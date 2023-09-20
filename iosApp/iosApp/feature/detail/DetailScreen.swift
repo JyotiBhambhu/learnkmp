@@ -8,12 +8,13 @@
 
 import SwiftUI
 import shared
+import data
 import SDWebImageSwiftUI
 
 struct DetailScreen: View {
-    let launchInfo: RocketLaunch
+    let launchInfo: DataRocketLaunch
     
-    init(launchInfo: RocketLaunch) {
+    init(launchInfo: DataRocketLaunch) {
         self.launchInfo = launchInfo
     }
     

@@ -1,6 +1,6 @@
 package com.jyoti.learnkmp.domain
 
-import com.jyoti.learnkmp.data.model.RocketLaunch
+import com.jyoti.data.model.RocketLaunch
 import com.jyoti.learnkmp.date.daysUntilNewYear
 import com.jyoti.learnkmp.util.Platform
 import com.jyoti.learnkmp.util.getPlatform

@@ -1,6 +1,6 @@
 package com.jyoti.learnkmp.domain
 
-import com.jyoti.learnkmp.data.model.RocketLaunch
+import com.jyoti.data.model.RocketLaunch
 import io.ktor.client.HttpClient
 import io.ktor.client.call.body
 import io.ktor.client.request.get

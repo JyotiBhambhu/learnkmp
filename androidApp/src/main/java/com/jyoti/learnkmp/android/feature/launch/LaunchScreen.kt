@@ -12,7 +12,7 @@ import androidx.compose.runtime.getValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import coil.compose.AsyncImage
-import com.jyoti.learnkmp.data.model.RocketLaunch
+import com.jyoti.data.model.RocketLaunch
 import org.koin.androidx.compose.koinViewModel
 
 @Composable
@@ -26,7 +26,7 @@ fun LaunchRoute(viewModel: LaunchViewModel = koinViewModel(), onLaunchClick: (la
 }
 
 @Composable
-private fun LaunchItem(launchInfo: RocketLaunch, onClick: (launchId: String) -> Unit) {
+private fun LaunchItem(launchInfo: com.jyoti.data.model.RocketLaunch, onClick: (launchId: String) -> Unit) {
     ListItem(
         modifier = Modifier.clickable { launchInfo.id?.let { onClick(it) } },
         headlineContent = {

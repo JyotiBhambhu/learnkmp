@@ -10,7 +10,7 @@ import androidx.compose.runtime.getValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import coil.compose.AsyncImage
-import com.jyoti.learnkmp.data.model.RocketLaunch
+import com.jyoti.data.model.RocketLaunch
 import org.koin.androidx.compose.koinViewModel
 
 @Composable
