@@ -14,7 +14,7 @@ class LaunchViewModel: ObservableObject{
     @Published var error: String?
     
     init() {
-        RocketLaunchesUseCase().invoke{ rocketLaunches, error in
+        RocketLaunchesUseCaseHelper().invoke{ rocketLaunches, error in
             DispatchQueue.main.async {
                 if rocketLaunches != nil {
                     self.state = rocketLaunches
