@@ -17,6 +17,9 @@
 		3B5994032AB46715009029DB /* DetailScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B5994022AB46715009029DB /* DetailScreen.swift */; };
 		3B70F0C32ABAE22000E84AFC /* data.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B70F0C22ABAE22000E84AFC /* data.xcframework */; };
 		3B70F0C42ABAE22000E84AFC /* data.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3B70F0C22ABAE22000E84AFC /* data.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		3B8B65EC2ABC10D60071FE41 /* data.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B70F0C22ABAE22000E84AFC /* data.xcframework */; };
+		3B8B65ED2ABC15460071FE41 /* data.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B70F0C22ABAE22000E84AFC /* data.xcframework */; };
+		3B8B65EE2ABC2A8B0071FE41 /* data.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B70F0C22ABAE22000E84AFC /* data.xcframework */; };
 		7555FF83242A565900829871 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7555FF82242A565900829871 /* ContentView.swift */; };
 /* End PBXBuildFile section */
 
@@ -55,6 +58,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3B8B65EC2ABC10D60071FE41 /* data.xcframework in Frameworks */,
+				3B8B65EE2ABC2A8B0071FE41 /* data.xcframework in Frameworks */,
+				3B8B65ED2ABC15460071FE41 /* data.xcframework in Frameworks */,
 				3B70F0C32ABAE22000E84AFC /* data.xcframework in Frameworks */,
 				3B5994012AB461C0009029DB /* SDWebImageSwiftUI in Frameworks */,
 			);

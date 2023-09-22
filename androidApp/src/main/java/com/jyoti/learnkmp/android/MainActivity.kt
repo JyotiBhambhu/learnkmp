@@ -23,11 +23,13 @@ import com.jyoti.learnkmp.android.feature.detail.detailScreen
 import com.jyoti.learnkmp.android.feature.detail.navigateToDetail
 import com.jyoti.learnkmp.android.feature.launch.launchRoute
 import com.jyoti.learnkmp.android.feature.launch.launchScreen
+import com.jyoti.learnkmp.findElementInList
 
 class MainActivity : ComponentActivity() {
     @OptIn(ExperimentalLayoutApi::class)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        findElementInList(1, listOf(1, 2, 3))
         setContent {
             MyApplicationTheme {
                 Surface(

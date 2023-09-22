@@ -15,6 +15,21 @@ class LaunchViewModel: ObservableObject{
     @Published var error: String?
     
     init() {
+//        usingCallbacks()
+        usingTask()
+    }
+    
+    func usingTask(){
+        let task = Task{ @MainActor in
+            do{
+                self.state = try await RocketLaunchesUseCaseHelper().invoke()
+            }catch{
+                self.error = "We had an error: \(error)"
+            }
+            
+        }
+    }
+    func usingCallbacks(){
         RocketLaunchesUseCaseHelper().invoke{ rocketLaunches, error in
             DispatchQueue.main.async {
                 if rocketLaunches != nil {
